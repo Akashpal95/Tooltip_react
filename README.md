@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Project Description
 A simple tooltip component such that when you hover over a button it shows me some
-tooltip.
+tooltip. The tooltip component recieves the position of the tooltip through props. A selector is present to select the position of where the tooltip appears(Top, Bottom, Left, Right).
 
 ## Available Scripts
 

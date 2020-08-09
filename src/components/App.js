@@ -1,30 +1,33 @@
 import React from 'react';
 import './App.css';
 import Tool from './tool';
+import SelectPostition from './selectPostition';
 
 class App extends React.Component {
   constructor(){
     super();
     this.state = {
       showToolTip: false,
-      toolTipSide: "top"
+      position: "top"
     }
   }
   changeShowToolTip = () => {
     console.log('Mouse Over!')
-    const { showToolTip } = this.state
+    const { showToolTip } = this.state;
+    let position = document.getElementById("positions").value;
     this.setState({
-      showToolTip: !showToolTip
+      showToolTip: !showToolTip,
+      position
     });
   }
   render(){
-    console.log("render");
     return (
       <div className="App">
         <Tool 
         state={this.state}
         changeShowToolTip = {this.changeShowToolTip}
         />
+        <SelectPostition />
       </div>
     );
   }

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import './tool.css';
 
 class Tool extends Component {
     render() {
-        const {showToolTip , toolTipSide} = this.props.state;
+        const {showToolTip , position} = this.props.state;
         const {changeShowToolTip} = this.props
         return (
             <div>
@@ -11,7 +12,7 @@ class Tool extends Component {
                 </div>
                 {
                     showToolTip
-                    ?<div className= {`box-${toolTipSide} arrow-${toolTipSide}`}>Press here to download.</div>
+                    ?<div className= {`box-${position} arrow-${position}`}>Press here to download.</div>
                     :null
                 }
             </div>
